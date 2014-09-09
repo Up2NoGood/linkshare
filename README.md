@@ -9,7 +9,7 @@ Install all dependencies (you need the bundler gem installed):
 ```bash
 $ cd path-to-linkshare
 $ bundle
-'''
+```
 
 Start the application:
 
