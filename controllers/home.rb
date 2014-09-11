@@ -1,6 +1,6 @@
 # encoding: utf-8
 class HomeController < LinkShare
   get '/' do
-    "LinkShare!"
+    erb :linkshare
   end
 end
