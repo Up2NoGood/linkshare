@@ -5,6 +5,9 @@ require 'bundler'
 Bundler.require
 
 require 'sinatra/base'
+require 'sequel'
+
+DB = Sequel.sqlite("linkshare.db")
 
 require_relative 'app'
 require_relative 'controllers/init'
