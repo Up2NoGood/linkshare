@@ -1,6 +1,10 @@
 # encoding: utf-8
+
+require_relative '../models/init'
+
 class LinkController < LinkShare
   get '/' do
-    'Links'
+    @links = Link.all
+    erb :linkshare
   end
 end

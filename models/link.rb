@@ -1,5 +1,7 @@
 # encoding: utf-8
-#require 'sequel'
+require 'sinatra'
+require 'sequel'
 
-#class Link < Sequel::Model
-#end
+class Link < Sequel::Model
+  many_to_one :user, :key => :userid
+end
