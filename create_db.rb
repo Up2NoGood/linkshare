@@ -24,3 +24,4 @@ DB.create_table :links do
   Datetime    :creation_date
   Int         :userid
 end
+
