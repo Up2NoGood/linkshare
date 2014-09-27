@@ -1,0 +1,19 @@
+<table class="ink-table alternating">
+    <tbody>
+        <% for @link in @links %>
+        <tr>
+            <td>thumbnail</td>
+            <td>
+                <%= @link.title %>
+            </td>
+            <td>
+                <span>
+                    <img src="../imgs/icon-trash.png" />
+                    <img src="../imgs/icon-edit.png" />
+                    <img src="../imgs/icon-share.png" />
+                </span>
+            </td>
+        </tr>
+        <% end %>
+    </tbody>
+</table>

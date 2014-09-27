@@ -4,21 +4,10 @@ class HomeController < LinkShare
   users = DB[:users] # Create a dataset
 
   get '/' do
+    erb :index
+  end
 
-    #users.insert(:username => 'abc', :firstname => 'a', :lastname => 'bc', :email => 'minion1@a.com', :password => '123', :creation_date => Time.now)
-    #users.insert(:username => 'qwe', :firstname => 'q', :lastname => 'we', :email => 'minion2@a.com', :password => '123', :creation_date => Time.now)
-    #users.insert(:username => 'asd', :firstname => 'a', :lastname => 'sd', :email => 'minion3@a.com', :password => '123', :creation_date => Time.now)
-    #users.insert(:username => 'zxc', :firstname => 'z', :lastname => 'xc', :email => 'minion4@a.com', :password => '123', :creation_date => Time.now)
-
-    DB['select * from users'].each do |row|
-      p row
-    end
-
-    #deleted the extra
-    #users.where('id > 7').delete
-
-    puts "Users count: #{users.count}"
-
+  get '/login' do
     erb :login
   end
 
@@ -33,10 +22,6 @@ class HomeController < LinkShare
   end
 
   get('/logout'){ response.set_cookie(settings.username, false) ; redirect '/' }
-
-  get '/home' do
-    erb :linkshare
-  end
 
   get '/public' do
     erb :public

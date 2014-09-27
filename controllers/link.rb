@@ -5,6 +5,6 @@ require_relative '../models/init'
 class LinkController < LinkShare
   get '/' do
     @links = Link.all
-    erb :linkshare
+    erb :links
   end
 end
