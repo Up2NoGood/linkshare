@@ -1,11 +1,13 @@
+Total: <%= @links.count %>
 <table class="ink-table alternating">
     <tbody>
         <% for @link in @links %>
         <tr>
             <td>thumbnail</td>
-            <td>
-                <%= @link.title %>
-            </td>
+            <td><%= @link.id %></td>
+            <td><%= @link.title %></td>
+            <td><%= @link.fullurl %></td>
+            <td><%= @link.creation_date %></td>
             <td>
                 <span>
                     <img src="../imgs/icon-trash.png" />

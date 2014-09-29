@@ -1,7 +1,8 @@
 # encoding: utf-8
 class HomeController < LinkShare
 
-  users = DB[:users] # Create a dataset
+  # Create a dataset
+  users = DB[:users]
 
   get '/' do
     erb :index
@@ -12,7 +13,6 @@ class HomeController < LinkShare
   end
 
   post '/login' do
-    #if params['username']==settings.username&&params['password']==settings.password
     if users.where('username == params[\'username\']') && users.where('password == params[\'password\']')
       response.set_cookie(settings.username,settings.token)
       redirect '/home'
